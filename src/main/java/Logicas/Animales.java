@@ -2,25 +2,20 @@ package Logicas;
 
 public abstract class Animales {
 
-    int habcal=1;
-    int habtem=2;
-    int habfri=3;
+    int pradera=1;
+    int desertico=2;
+    int polar=3;
+    int acuario=4;
+    int pantano=5;
+    int selvatico=6;
+    int sabana=7;
     int carni=1;
     int herbi=2;
     int omni=3;
     protected int tipohabitat;
     protected int tipocomida;
 
-    public Animales(){
-
-    }
-    public int getTipeF(){
-        return tipocomida;
-    }
-
-    public int getTipeH(){
-        return tipohabitat;
-    }
+    public Animales(){}
 
 
 }

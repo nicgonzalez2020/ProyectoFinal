@@ -17,8 +17,9 @@ public class Zoo {
         h.remove(a);
     }
 
-    public ArrayList<Habitats> getHab() {
-        return h;
+    public Habitats getHab(int i) {
+        return h.get(i);
     }
+    public int getNumH(){return h.size();}
 
 }

@@ -2,24 +2,42 @@ package Logicas;
 
 import java.util.ArrayList;
 
-public abstract class Habitats {
+public class Habitats {
     ArrayList<Animales> var;
-    int lim=5;
-    int tem;
-    int habcal=1;
-    int habtem=2;
-    int habfri=3;
-    int carni=1;
-    int herbi=2;
-    int omni=3;
-    public Habitats(){var = new ArrayList();}
-    public boolean addAnimal(Animales a){
-        var.add(a) ;
-        return true;
-    }
+    /**
+     * pradera=1 , desertico=2, polar=3, acuario=4, pantano=5, selvatico=6, o sabana=7.
+     */
+    int tipo;
+    /**
+     * limite de animales por habitat
+     */
+    int limit=5;
 
-    public void QuitarAnimal(Animales a){
-        var.remove(a);
+    public Habitats(int tipo){
+        var = new ArrayList();
+        this.tipo = tipo;
     }
+    public void addAnimal(Animales a){
+        if(a.tipohabitat==tipo){
+            if(var.isEmpty()){
+                var.add(a);
+            }else{
+                if(var.size()<5){
+                    if( var.get(var.size()-1).tipocomida == a.tipocomida){
+                        var.add(a);
+                    }else{
+                   /*
+                   lanzar excepcion, animal incompatible con los demas.
+                    */
+                    }
+                }
+            }
+        }else{
+            /*
+            lanzar excepcion, animal incompatible con el habitat.
+             */
+        }
+    }
+    public void QuitarAnimal(Animales a){ var.remove(a); }
 
 }
