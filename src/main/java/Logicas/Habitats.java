@@ -13,6 +13,8 @@ public class Habitats {
      */
     int limit=5;
 
+    int nivelAyC=5;
+
     public Habitats(int tipo){
         var = new ArrayList();
         this.tipo = tipo;

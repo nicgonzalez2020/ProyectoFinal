@@ -16,7 +16,16 @@ public class Zoo {
     public void remHab(Habitats a) {
         h.remove(a);
     }
+    public void AddAn(Animales a, int b){
+        h.get(b).addAnimal(a);
+    }
+    public void RemAn(Animales a, int b){
+        h.get(b).QuitarAnimal(a);
+    }
 
+    public void AlimHab(int a){
+        h.get(a).nivelAyC=5;
+    }
     public Habitats getHab(int i) {
         return h.get(i);
     }
