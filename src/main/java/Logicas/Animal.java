@@ -1,6 +1,6 @@
 package Logicas;
 
-public abstract class Animales {
+public abstract class Animal {
 
     int pradera=1;
     int desertico=2;
@@ -15,7 +15,7 @@ public abstract class Animales {
     protected int tipohabitat;
     protected int tipocomida;
 
-    public Animales(){}
+    public Animal(){}
 
 
 }

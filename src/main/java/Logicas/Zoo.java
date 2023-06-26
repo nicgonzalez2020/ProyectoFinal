@@ -3,30 +3,30 @@ package Logicas;
 import java.util.ArrayList;
 
 public class Zoo {
-    private ArrayList<Habitats> h;
+    private ArrayList<Habitat> h;
 
     public Zoo() {
         h = new ArrayList<>();
     }
 
-    public void addHab(Habitats a) {
+    public void addHab(Habitat a) {
         h.add(a);
     }
 
-    public void remHab(Habitats a) {
+    public void remHab(Habitat a) {
         h.remove(a);
     }
-    public void AddAn(Animales a, int b){
+    public void AddAn(Animal a, int b){
         h.get(b).addAnimal(a);
     }
-    public void RemAn(Animales a, int b){
+    public void RemAn(Animal a, int b){
         h.get(b).QuitarAnimal(a);
     }
 
     public void AlimHab(int a){
         h.get(a).nivelAyC=5;
     }
-    public Habitats getHab(int i) {
+    public Habitat getHab(int i) {
         return h.get(i);
     }
     public int getNumH(){return h.size();}
