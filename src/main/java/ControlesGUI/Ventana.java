@@ -2075,15 +2075,18 @@ public class Ventana extends JFrame {
         Timer timer = new Timer(15000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 for(int i=0;i<b.getNumH();i++){
-                    if(b.getHab(i).nivelC>0&&b.getHab(i).nivelA>0){
-                        b.getHab(i).nivelC=b.getHab(i).nivelC-1;
-                        b.getHab(i).nivelA=b.getHab(i).nivelA-1;
-                        if(b.getHab(i).nivelA==0){
-                            JOptionPane.showMessageDialog(Ventana.this, "Alerta habitat "+ i+1 +" sin agua");
-                        }
-                        if(b.getHab(i).nivelC==0){
-                            JOptionPane.showMessageDialog(Ventana.this, "Alerta habitat "+ i+1 +" sin comida");
+                    if(b.getHab(i).VerAnimales().size()>0){
+                        if(b.getHab(i).nivelC>0&&b.getHab(i).nivelA>0){
+                            b.getHab(i).nivelC=b.getHab(i).nivelC-1;
+                            b.getHab(i).nivelA=b.getHab(i).nivelA-1;
+                            if(b.getHab(i).nivelA==0){
+                                JOptionPane.showMessageDialog(Ventana.this, "Alerta habitat "+ i+1 +" sin agua");
+                            }
+                            if(b.getHab(i).nivelC==0){
+                                JOptionPane.showMessageDialog(Ventana.this, "Alerta habitat "+ i+1 +" sin comida");
+                            }
                         }
                     }
                 }
