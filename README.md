@@ -1,4 +1,3 @@
 # ProyectoFinal
-Juan Silva
--
+Juan Silva  -
 Nicolás González
