@@ -1,5 +1,6 @@
 package ElemnPanel;
 
+import ControlesGUI.Ventana;
 import Logicas.*;
 
 import javax.swing.*;

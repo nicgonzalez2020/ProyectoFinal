@@ -1,4 +1,4 @@
-package ElemnPanel;
+package ControlesGUI;
 import Logicas.*;
 import com.sun.source.tree.IfTree;
 
