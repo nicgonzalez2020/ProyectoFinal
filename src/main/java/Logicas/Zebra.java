@@ -1,8 +1,10 @@
 package Logicas;
 
 public class Zebra extends Animal {
+
     public Zebra(){
-        tipocomida=herbi;
+        esp=7;
+        tipocomida=6;
         tipohabitat=sabana;
     }
 

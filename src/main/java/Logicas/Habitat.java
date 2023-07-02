@@ -3,43 +3,47 @@ package Logicas;
 import java.util.ArrayList;
 
 public class Habitat {
-    ArrayList<Animal> var;
+    public ArrayList<Animal> var;
     /**
-     * pradera=1 , desertico=2, polar=3, acuario=4, pantano=5, selvatico=6, o sabana=7.
+     *
      */
-    int tipo;
+    public int tipo;
     /**
      * limite de animales por habitat
      */
-    int limit=5;
+    public int limit=5;
 
-    int nivelAyC=5;
+    public int nivelA=3;
+    public int nivelC=3;
+    public int tipocomidaha=334;
 
     public Habitat(int tipo){
-        var = new ArrayList();
+        var = new ArrayList<>();
         this.tipo = tipo;
     }
-    public void addAnimal(Animal a){
+    public void addAnimal(Animal a) throws AnimalIncompatibleConHabitatException, AnimalIncompatibleConLosDemasException, HabitatLLenoException {
         if(a.tipohabitat==tipo){
             if(var.isEmpty()){
                 var.add(a);
+                tipocomidaha=a.tipocomida;
             }else{
                 if(var.size()<5){
                     if( var.get(var.size()-1).tipocomida == a.tipocomida){
                         var.add(a);
                     }else{
-                   /*
-                   lanzar excepcion, animal incompatible con los demas.
-                    */
+                        throw new AnimalIncompatibleConLosDemasException("Animal Incompatible con los demas animales de este Habitat");
                     }
+                }else{
+                    throw new HabitatLLenoException("Habitat esta lleno");
                 }
             }
         }else{
-            /*
-            lanzar excepcion, animal incompatible con el habitat.
-             */
+            throw new AnimalIncompatibleConHabitatException("Animal Incompatible con el Habitat");
         }
     }
-    public void QuitarAnimal(Animal a){ var.remove(a); }
+    public void QuitarAnimal(int a){ var.remove(a); }
+    public ArrayList<Animal> VerAnimales(){
+        return var;
+    }
 
 }

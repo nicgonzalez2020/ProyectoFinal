@@ -1,8 +1,10 @@
 package Logicas;
 
 public class Leon extends Animal {
+
     public Leon(){
-        tipocomida= carni;
+        esp=3;
+        tipocomida= 2;
         tipohabitat=sabana;
     }
 }

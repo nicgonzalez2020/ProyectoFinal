@@ -1,8 +1,10 @@
 package Logicas;
 
 public class Pinguino extends Animal {
+
     public Pinguino(){
-        tipocomida=carni;
+        esp=6;
+        tipocomida=5;
         tipohabitat=polar;
     }
 }

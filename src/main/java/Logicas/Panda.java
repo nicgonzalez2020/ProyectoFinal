@@ -1,8 +1,10 @@
 package Logicas;
 
 public class Panda extends Animal {
+
     public Panda(){
-        tipocomida=herbi;
+        esp=4;
+        tipocomida=3;
         tipohabitat=pradera;
     }
 

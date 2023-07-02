@@ -1,8 +1,10 @@
 package Logicas;
 
 public class Elefante extends Animal {
+
     public Elefante(){
-        tipocomida=herbi;
+        esp=1;
+        tipocomida=0;
         tipohabitat=pradera;
     }
 }
