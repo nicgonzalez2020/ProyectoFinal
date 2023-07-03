@@ -8,6 +8,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * clase test para probar exceptions en clase zoo
+ */
 public class ZooTest {
     private Zoo zoo;
     private PanelZoo panelzoo;
