@@ -8,6 +8,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * clase panel que muestra el zoo y sus paneles habitat
+ */
 public class PanelZoo extends JPanel{
     private ImageIcon imagen;
 

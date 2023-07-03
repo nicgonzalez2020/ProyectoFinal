@@ -9,6 +9,9 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * clase panel que muestra un habitat y sus animales
+ */
 public class PanelHab extends JPanel{
     int type;
     int x,y;
