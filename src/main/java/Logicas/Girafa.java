@@ -1,5 +1,8 @@
 package Logicas;
 
+/**
+ * Clase girafa, un tipo de animal
+ */
 public class Girafa extends Animal {
 
     public Girafa(){

@@ -9,12 +9,30 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * clase panel de botones utilizados para alimentar a los habitats
+ */
 public class PanelAlim extends JPanel{
+    /**
+     * imagenes que seran los iconos de los botones para alimentar a los habitats
+     */
     ImageIcon Alim[]=new ImageIcon[7];
+    /**
+     * el habitat que sera alimentado mediante este panel
+     */
     Habitat xyy;
+    /**
+     * los botones utilizados para alimentar los habitats
+     */
     JButton bcarne, bhojas, bbambu, bpasto, bpescado, bfishfood, bagua;
+    /**
+     * propiedad para hacer referencia a si mismo
+     */
     PanelAlim thiss;
-    int xx,yy;
+
+    /**
+     * se añaden los iconos a los botones se designa su funcion y se añaden al panel
+     */
     public PanelAlim(){
 
         thiss=this;
@@ -178,9 +196,18 @@ public class PanelAlim extends JPanel{
         this.setVisible(true);
 
     }
+
+    /**
+     * metodo para designar el habitat al cual este panel va a alimentar
+     * @param habbb el habitat el cual se va poder alimentar y dar agua mediante este panel
+     */
     public void givehab(Habitat habbb){
         xyy=habbb;
     }
+
+    /**
+     * metodo para desvincular el habitat vinculado a este panel
+     */
     public void remhabfrpan(){
         xyy=null;
     }

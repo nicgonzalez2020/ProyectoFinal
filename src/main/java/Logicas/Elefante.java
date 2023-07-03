@@ -1,5 +1,8 @@
 package Logicas;
 
+/**
+ * Clase elefante, un tipo de animal
+ */
 public class Elefante extends Animal {
 
     public Elefante(){

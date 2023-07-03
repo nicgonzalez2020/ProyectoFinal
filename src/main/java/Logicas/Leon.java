@@ -1,5 +1,8 @@
 package Logicas;
 
+/**
+ * clase leon, un tipo de animal
+ */
 public class Leon extends Animal {
 
     public Leon(){

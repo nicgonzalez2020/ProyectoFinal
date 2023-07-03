@@ -1,5 +1,8 @@
 package Logicas;
 
+/**
+ * clase pez, un tipo de animal
+ */
 public class Pez extends Animal{
 
     public Pez(){

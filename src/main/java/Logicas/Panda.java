@@ -1,5 +1,8 @@
 package Logicas;
 
+/**
+ * clase panda, un tipo de animal
+ */
 public class Panda extends Animal {
 
     public Panda(){

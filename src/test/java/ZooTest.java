@@ -5,7 +5,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
+
 public class ZooTest {
     private Zoo zoo;
     private PanelZoo panelzoo;
@@ -29,6 +31,7 @@ public class ZooTest {
         for(int i=0;i<7;i++){
             zoo.addHab(hab[i]);
         }
+
     }
     @Test
     @DisplayName("Añadir Animales al Zoo")
@@ -41,5 +44,9 @@ public class ZooTest {
         zoo.AddAn(b,0);
         zoo.AddAn(a,0);
         zoo.AddAn(c,0);
+
+
     }
+
+
 }

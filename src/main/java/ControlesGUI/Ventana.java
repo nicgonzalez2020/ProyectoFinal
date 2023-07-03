@@ -7,11 +7,21 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
+/**
+ * clase ventana utilizada para crear el JFrame donde se
+ * pondran los paneles del zoo y los paneles de los habitats
+ * y mediante se modificaran los habitats y los animales dentro de estos
+ */
 public class Ventana extends JFrame {
+    /**
+     * propiedades para guardar las ubicaciones de los paneles de alimentacion
+     */
 
     int[] cordx =new int[6];
     int[] cordy =new int[6];
-
+    /**
+     * propiedades para guardar los botones para manejar el zoo dentro de una barra superior
+     */
     private JMenuBar menuBar;
     private JMenu menu1, menu2,  submenu11,submenu12,menuanadir, menuquitar ;
     private JMenu h1plus, h2plus, h3plus, h4plus, h5plus ,h6plus;
@@ -21,6 +31,11 @@ public class Ventana extends JFrame {
     private JMenuItem item21,item22, item23, item24,item25,item26;
     public PanelAlim panelim[];
     Ventana v;
+
+    /**
+     * se crean y se añaden todos los botones al menu superior de la ventana
+     * y se designan las funciones de todos los botones
+     */
     public Ventana(){
         super();
         panelim = new PanelAlim[6];
@@ -2071,7 +2086,10 @@ public class Ventana extends JFrame {
         menuBar.add(menu2);
         this.setJMenuBar(menuBar);
         this.setVisible(true);
-
+         /**
+         * timer utilizado para disminuir la comida y el agua de cada habitat
+         * cada cierto tiempo si es que hay animales en el
+         */
         Timer timer = new Timer(15000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -2093,6 +2111,9 @@ public class Ventana extends JFrame {
             }
         });
         timer.start();
+        /**
+         * timer utilizado para actualizar el panel del zoo cada segundo
+         */
         Timer timer1 = new Timer(1000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

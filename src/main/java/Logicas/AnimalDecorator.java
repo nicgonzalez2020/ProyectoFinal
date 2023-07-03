@@ -1,5 +1,9 @@
 package Logicas;
 
+
+/**
+ * Clase molde del decorador de la clase animal
+ */
 public abstract class AnimalDecorator extends Animal{
     protected Animal animal;
     public AnimalDecorator(Animal anim){

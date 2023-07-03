@@ -1,5 +1,8 @@
 package Logicas;
 
+/**
+ * clase zebra, un tipo de animal
+ */
 public class Zebra extends Animal {
 
     public Zebra(){
